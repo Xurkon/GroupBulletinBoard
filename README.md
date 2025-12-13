@@ -7,16 +7,20 @@ This is a port to WotLK (3.3.5a) of a TBC backport of a Classic TBC addon!
 * WotLK (3.3.5a) port: [fondlez](https://github.com/fondlez)
 * TBC 2.4.3 backport: [Obszczymucha aka. Ohhaimark](https://codeberg.org/obszczymucha/group-bulletin-board-tbc)
 * Classic TBC addon: [Vyscî-Whitemane](https://github.com/Vysci/LFG-Bulletin-Board)
-* Original addon: https://legacy.curseforge.com/wow/addons/group-bulletin-board
+* Original addon: <https://legacy.curseforge.com/wow/addons/group-bulletin-board>
 
 ## Description
-GroupBulletinBoard (GBB) provides an overview of the endless requests in the 
-chat channels. It detects all requests to the instances, sorts them and presents 
-them clearly way. Numerous filtering options reduce the gigantic number to 
-exactly the dungeons that interest you. And if that's not enough, GBB will let 
+
+GroupBulletinBoard (GBB) provides an overview of the endless requests in the
+chat channels. It detects all requests to the instances, sorts them and presents
+them clearly way. Numerous filtering options reduce the gigantic number to
+exactly the dungeons that interest you. And if that's not enough, GBB will let
 you know about any new request via a sound or chat notification.
 
-Currently, English, German, Russian and Chinese dungeons are recognized 
+**Ascension Support**: Includes a dedicated filter for Ascension-specific
+custom dungeons like Vault of the Inquisition and Road to De' Other Side.
+
+Currently, English, German, Russian and Chinese dungeons are recognized
 natively. But it is easily possible to adapt GBB to any language.
 
 To open the settings, use slash command: **`/gbb`** or click the minimap icon.
@@ -24,14 +28,16 @@ To open the settings, use slash command: **`/gbb`** or click the minimap icon.
 ## Graphical Interface
 
 ### Main Window
+
 ![Main Window screenshot](doc/img/addon-gbb-1.2.0-main.jpg)
 
 ### Interface Settings
+
 ![Interface Settings screenshot](doc/img/addon-gbb-1.2.0-settings.jpg)
 
 ## Slash Commands
 
-`<value>` can be true, 1, enable, false, 0, disable. If <value> is omitted, the 
+`<value>` can be true, 1, enable, false, 0, disable. If <value> is omitted, the
 current status switches.
 
 * `/gbb notify chat <value>` - On new request make a chat notification
@@ -41,8 +47,8 @@ current status switches.
 * `/gbb config/setup/options` - Open configuration
 * `/gbb about` - open about
 * `/gbb help` - Print help
-* `/gbb chat clean/organize` - Creates a new chat tab if one doesn't already 
-exist, named \"LFG\" with all channels subscribed. Removes LFG heavy spam 
+* `/gbb chat clean/organize` - Creates a new chat tab if one doesn't already
+exist, named \"LFG\" with all channels subscribed. Removes LFG heavy spam
 channels from default chat tab
 * `/gbb` - open main window
 
@@ -51,11 +57,12 @@ channels from default chat tab
 ### Q. How to blacklist a word?
 
 From GroupBulletinBoard Settings, click on "Search patterns", make sure "Custom"
-is checked, add words to "Blacklist words", then reload the user interface, e.g. 
+is checked, add words to "Blacklist words", then reload the user interface, e.g.
 using the `/reload` or `/reloadui` command.
 
 ## Credits
 
 ### Original Addon
+
 * Arrogant_Dreamer, Hubbotu and kavarus for the Russian translation
 * Baudzilla for the graphics/idea of the resize-code

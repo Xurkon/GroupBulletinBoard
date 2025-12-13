@@ -7,16 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.3.0] - 2025-12-13
 
-### Optimized
-
-- Implemented UI update throttling (0.2s interval) to prevent stutter during high chat volume.
-- Added caching to `SplitNoNb` function to reduce string processing overhead.
-- Smoother in-game performance on trade channel spam.
-
 ### Added
 
-- added support for Wrath of the Lich King expansion (WotLK) content
-- added a larger range of default Blacklist terms
+- **Ascension Filter**: New options panel for Ascension-specific dungeons
+  - Vault of the Inquisition (VOTI)
+  - Road to De' Other Side (RDOS)
+- Support for Wrath of the Lich King expansion (WotLK) content
+- Larger range of default Blacklist terms
+
+### Fixed
+
+- Message position jumping bug - messages no longer rapidly change positions
+
+### Optimized
+
+- UI update throttling (0.2s interval) to prevent stutter during high chat volume
+- Added caching to `SplitNoNb` function to reduce string processing overhead
+- Smoother in-game performance on trade channel spam
 
 ## [1.1.1] - 2024-12-25
 
