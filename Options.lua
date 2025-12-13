@@ -295,7 +295,7 @@ function GBB.OptionsInit()
 
   GBB.Options.InLine()
   GBB.Options.AddButton(GBB.L["BtnSelectAll"], function()
-    DoSelectFilter(true, TbcChkBox_FilterDungeon, GBB.TBCDUNGEONSTART, GBB.TBCMAXDUNGEON - 2)   -- Doing -2 to not select trade and misc
+    DoSelectFilter(true, TbcChkBox_FilterDungeon, GBB.TBCDUNGEONSTART, GBB.TBCMAXDUNGEON - 2) -- Doing -2 to not select trade and misc
   end)
   GBB.Options.AddButton(GBB.L["BtnUnselectAll"], function()
     DoSelectFilter(false, TbcChkBox_FilterDungeon, GBB.TBCDUNGEONSTART, GBB.TBCMAXDUNGEON)
@@ -304,11 +304,8 @@ function GBB.OptionsInit()
 
   GBB.Options.Indent(-10)
 
-  -- Reset to left side before adding Channel section
-  GBB.Options.NextRelativX = 25
-  GBB.Options.NextRelativY = -25
-
-  --GBB.Options.AddSpace()
+  -- Dedicated Channel Filter Panel
+  GBB.Options.AddPanel(GBB.L["ChannelPanelFilter"])
   SetChatOption()
 
   if has_wotlk then
