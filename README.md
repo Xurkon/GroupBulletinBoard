@@ -6,6 +6,7 @@
 ![License](https://img.shields.io/github/license/Xurkon/GroupBulletinBoard?style=for-the-badge&label=LICENSE&color=2980b9)
 ![Game](https://img.shields.io/badge/GAME-WOW_3.3.5a-blue?style=for-the-badge&logo=battle.net&logoColor=white)
 ![Platform](https://img.shields.io/badge/PLATFORM-PROJECT_ASCENSION-orange?style=for-the-badge)
+![Downloads](https://img.shields.io/github/downloads/Xurkon/GroupBulletinBoard/total?style=for-the-badge&label=DOWNLOADS&color=e67e22)
 
 <br/>
 
