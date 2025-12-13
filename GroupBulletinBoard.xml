@@ -1,19 +1,26 @@
-﻿<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/"> 
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
 
 	<Button name="GroupBulletinBoard_MiniButton" inherits="UIPanelButtonTemplate" virtual="true">
 		<NormalFont style="GameFontNormalSmall"/>
 		<HighlightFont style="GameFontHighlightSmall"/>
 		<DisabledFont style="GameFontDisableSmall"/>
-		<Size><AbsDimension x="20" y="18"/></Size>
+		<Size>
+			<AbsDimension x="20" y="18"/>
+		</Size>
 	</Button>
 
 	<Frame name="GroupBulletinBoardFrame" parent="UIParent" hidden="true" movable="true" enableMouse="true" frameStrata="HIGH" resizable="true">
-		<Size><AbsDimension x="800" y="500"/></Size>
+		<Size>
+			<AbsDimension x="800" y="500"/>
+		</Size>
 		<Anchors>
 			<Anchor point="CENTER"/>
-			<Offset><AbsDimension x="300" y="0"/></Offset>
+			<Offset>
+				<AbsDimension x="300" y="0"/>
+			</Offset>
 		</Anchors>
-		
+
 		<Backdrop name="$parentBackdrop" tile="true" frameStrata="PARENT">
 			<EdgeSize>
 				<AbsValue val="16"/>
@@ -24,14 +31,14 @@
 			<BackgroundInsets>
 				<AbsInset left="5" right="5" top="5" bottom="5"/>
 			</BackgroundInsets>
-		</Backdrop>	
-		
+		</Backdrop>
+
 		<Layers>
 			<Layer level="BACKGROUND">
-        <Texture>                           
-          <Color a=".7" r="0" g="0" b="0" />
-        </Texture>                          
-			
+				<Texture>
+					<Color a=".7" r="0" g="0" b="0" />
+				</Texture>
+
 				<FontString name="$parentTitle" inherits="GameFontNormal" text="Group Bulletin Board" maxLines="1" justifyH="LEFT" justifyV="TOP">
 					<Anchors>
 						<Anchor point="TOPLEFT">
@@ -42,7 +49,7 @@
 					</Anchors>
 				</FontString>
 
-				<FontString name="$parentTitleEdition" inherits="GameFontNormal" text="fondlez Edition" maxLines="1" justifyH="LEFT" justifyV="TOP">
+				<FontString name="$parentTitleEdition" inherits="GameFontNormal" text="v1.3.0 by Xurkon" maxLines="1" justifyH="LEFT" justifyV="TOP">
 					<Anchors>
 						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parentTitle">
 							<Offset>
@@ -50,7 +57,7 @@
 							</Offset>
 						</Anchor>
 					</Anchors>
-          <Color r="0.7" g="0.7" b="0.7" a="0.4"/>
+					<Color r="0.7" g="0.7" b="0.7" a="0.4"/>
 				</FontString>
 
 				<FontString name="$parentStatusText" inherits="GameFontNormalSmall" text="status - when you can read this, try /reload" maxLines="1" justifyH="LEFT" justifyV="BOTTOM">
@@ -67,15 +74,15 @@
 							</Offset>
 						</Anchor>
 					</Anchors>
-					
-				</FontString>	
-				
+
+				</FontString>
+
 			</Layer>
 		</Layers>
 
-		<Frames>			
+		<Frames>
 			<!-- default gui elements -->
-			
+
 			<Button name="$parentCloseButton" inherits="UIPanelCloseButton" Text="Close">
 				<Anchors>
 					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
@@ -91,22 +98,22 @@
 				</Scripts>
 			</Button>
 
-      <Button name="$parentSettingsButton" inherits="UIPanelButtonTemplate">
-        <Layers>
-          <Layer level="ARTWORK">
-            <FontString inherits="GameFontNormalSmall" text="Settings">
-              <Anchors>
-                <Anchor point="CENTER"/>
-              </Anchors>
-            </FontString>
-          </Layer>
-        </Layers>
+			<Button name="$parentSettingsButton" inherits="UIPanelButtonTemplate">
+				<Layers>
+					<Layer level="ARTWORK">
+						<FontString inherits="GameFontNormalSmall" text="Settings">
+							<Anchors>
+								<Anchor point="CENTER"/>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
 				<Anchors>
 					<Anchor point="RIGHT" relativeTo="$parentCloseButton" relativePoint="LEFT"/>
 				</Anchors>
-        <Size>
-          <AbsDimension x="60" y="18"/>
-        </Size>
+				<Size>
+					<AbsDimension x="60" y="18"/>
+				</Size>
 				<Scripts>
 					<OnMouseDown>
 						GroupBulletinBoard_Addon.BtnSettings(button )
@@ -117,34 +124,38 @@
 			<!-- announcebox -->
 			<Button name="$parentSelectChannel" inherits="UIPanelButtonTemplate" text="channel">
 				<Anchors>
-					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parent" >
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parent">
 						<Offset>
 							<AbsDimension x="10" y="22"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
-				<Size><AbsDimension x="150" y="20" /></Size>
+				<Size>
+					<AbsDimension x="150" y="20" />
+				</Size>
 				<Scripts>
 					<OnClick>
 						GroupBulletinBoard_Addon.BtnSelectChannel()
 					</OnClick>
 				</Scripts>
 			</Button>
-			
+
 			<EditBox name="$parentAnnounceMsg" letters="255" autoFocus="false" inherits="InputBoxTemplate">
 				<Anchors>
-					<!--<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parentSelectChannel" >-->
-						<!--<Offset>-->
-							<!--<AbsDimension x="8" y="0"/>-->
-						<!--</Offset>-->
+					<!--<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parentSelectChannel">-->
+					<!--<Offset>-->
+					<!--<AbsDimension x="8" y="0"/>-->
+					<!--</Offset>-->
 					<!--</Anchor>-->
-					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parent" >
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parent">
 						<Offset>
 							<AbsDimension x="16" y="22"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
-				<Size><AbsDimension x="350" y="20"/></Size>
+				<Size>
+					<AbsDimension x="350" y="20"/>
+				</Size>
 				<Scripts>
 					<OnEditFocusGained>
 						GroupBulletinBoard_Addon.GetFocus()
@@ -160,33 +171,35 @@
 
 			<Button name="$parentAnnounce" inherits="UIPanelButtonTemplate" text="Post">
 				<Anchors>
-					<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parentAnnounceMsg" >
+					<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parentAnnounceMsg">
 						<Offset>
 							<AbsDimension x="10" y="0"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
-				<Size><AbsDimension x="100" y="20" /></Size>
+				<Size>
+					<AbsDimension x="100" y="20" />
+				</Size>
 				<Scripts>
 					<OnClick>
 						GroupBulletinBoard_Addon.Announce()
 					</OnClick>
 				</Scripts>
 			</Button>
-			
+
 			<!--Scrollframe -->
 			<ScrollFrame name="GroupBulletinBoardFrame_ScrollFrame" inherits="UIPanelScrollFrameTemplate">
 				<!--<Backdrop name="$parentBackdrop" bgFile="Interface\TutorialFrame\TutorialFrameBackground" tile="true">-->
-					<!--<BackgroundInsets>-->
-						<!--<AbsInset left="-3" right="-23" top="-3" bottom="-3"/>-->
-					<!--</BackgroundInsets>-->
+				<!--<BackgroundInsets>-->
+				<!--<AbsInset left="-3" right="-23" top="-3" bottom="-3"/>-->
+				<!--</BackgroundInsets>-->
 				<!--</Backdrop>	-->
 				<Anchors>
 					<Anchor point="TOPLEFT">
 						<Offset>
 							<AbsDimension x="10" y="-30"/>
-						</Offset>						
-					</Anchor>				
+						</Offset>
+					</Anchor>
 				</Anchors>
 				<Size>
 					<AbsDimension x="100" y="100"/>
@@ -201,8 +214,8 @@
 			</ScrollFrame>
 
 			<!-- groupframe -->
-			
-			<ScrollingMessageFrame enableMouseWheel="true" name="GroupBulletinBoardFrame_GroupFrame"  parentKey="MessageFrame" enableMouseClicks="true" >
+
+			<ScrollingMessageFrame enableMouseWheel="true" name="GroupBulletinBoardFrame_GroupFrame" parentKey="MessageFrame" enableMouseClicks="true">
 				<Anchors>
 					<Anchor point="TOPLEFT">
 						<Offset>
@@ -221,13 +234,13 @@
 				<Scripts>
 					<OnMouseWheel>
 						GroupBulletinBoard_Addon.ScrollGroupList(self,delta)
-					</OnMouseWheel>							
+					</OnMouseWheel>
 				</Scripts>
-						
+
 			</ScrollingMessageFrame>
-			
+
 		</Frames>
-		
+
 		<Scripts>
 			<OnSizeChanged>
 				GroupBulletinBoard_Addon.OnSizeChanged()
@@ -235,24 +248,24 @@
 			<OnLoad>
 				GroupBulletinBoard_Addon.OnLoad()
 			</OnLoad>
-      <OnShow>
+			<OnShow>
         GroupBulletinBoard_Addon.OnShow();
-      </OnShow>
-      <OnHide>
+			</OnShow>
+			<OnHide>
         GroupBulletinBoard_Addon.OnHide();
-      </OnHide>
+			</OnHide>
 
-			
+
 			<OnMouseDown>
 				GroupBulletinBoard_Addon.ClickFrame(self,button)
 			</OnMouseDown>
 		</Scripts>
 	</Frame>
-	
+
 	<Frame hidden="false" name="GroupBulletinBoard_TmpHeader" virtual="true">
 		<Layers>
 			<Layer level="ARTWORK">
-				<FontString name="$parent_name" text="samplename" inherits="GameFontNormal" maxLines="1" justifyH="LEFT" justifyV="TOP"/>					
+				<FontString name="$parent_name" text="samplename" inherits="GameFontNormal" maxLines="1" justifyH="LEFT" justifyV="TOP"/>
 			</Layer>
 		</Layers>
 		<Scripts>
@@ -262,9 +275,9 @@
 		</Scripts>
 	</Frame>
 	<Frame hidden="false" name="GroupBulletinBoard_TmpRequest" virtual="true">
-	
+
 		<Layers>
-			<Layer level="ARTWORK">				
+			<Layer level="ARTWORK">
 				<FontString name="$parent_name" text="samplename" inherits="GameFontNormal" maxLines="1" justifyH="LEFT" justifyV="TOP">
 					<Size>
 						<AbsDimension x="100" y=""/>
@@ -291,9 +304,9 @@
 			</OnEnter>
 			<OnLeave>
 				GroupBulletinBoard_Addon.RequestHideTooltip(self)
-			</OnLeave>					
+			</OnLeave>
 		</Scripts>
-		
-	</Frame>	
-	
+
+	</Frame>
+
 </Ui>
