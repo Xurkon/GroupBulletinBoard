@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroupBulletinBoard - WoW LFG Addon</title>
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --bg-secondary: #252525;
+            --accent: #e67e22;
+            --accent-hover: #f39c12;
+            --text-main: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --card-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, #1a0f0c 0%, #4e2a1b 100%);
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #e0e0e0, #e67e22);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(230, 126, 34, 0.1);
+        }
+
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #333;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            color: var(--accent);
+            margin-top: 0;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Changelog */
+        .changelog {
+            background-color: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 4rem;
+        }
+
+        .version {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #444;
+        }
+
+        .version h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .version-date {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: normal;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li:before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Commands Section */
+        .commands {
+            background-color: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .command-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .command {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: monospace;
+        }
+
+        .command code {
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>GroupBulletinBoard</h1>
+            <p>LFG/LFM Request Aggregator for World of Warcraft 3.3.5a</p>
+            <div>
+                <a href="https://github.com/Xurkon/GroupBulletinBoard/releases/latest" class="btn">⬇ Download v1.6.0</a>
+                <a href="https://github.com/Xurkon/GroupBulletinBoard" class="btn btn-secondary">📂 View Source</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section class="features">
+            <div class="card">
+                <h3>🔍 Smart Detection</h3>
+                <p>Automatically detects LFG/LFM requests from chat channels and organizes them by dungeon.</p>
+            </div>
+            <div class="card">
+                <h3>🎮 Ascension Support</h3>
+                <p>Dedicated filter panel for custom Ascension dungeons: <strong>Vault of the Inquisition</strong> and <strong>Road to De' Other Side</strong>.</p>
+            </div>
+            <div class="card">
+                <h3>🌍 Multi-Language</h3>
+                <p>Supports <strong>English, German, Russian, French</strong>, and <strong>Chinese</strong> dungeon detection.</p>
+            </div>
+            <div class="card">
+                <h3>🔔 Notifications</h3>
+                <p>Get <strong>sound</strong> or <strong>chat alerts</strong> when groups are looking for your dungeons.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Performance</h3>
+                <p>Optimized with <strong>UI throttling</strong> and <strong>caching</strong> for smooth gameplay even with heavy chat spam.</p>
+            </div>
+            <div class="card">
+                <h3>🎨 Customizable</h3>
+                <p>Filter by dungeon, level range, heroic/normal mode. Fold/unfold dungeons to focus on what matters.</p>
+            </div>
+        </section>
+
+        <section class="commands">
+            <h2 style="color: var(--text-main); margin-bottom: 2rem;">⌨️ Slash Commands</h2>
+            <div class="command-grid">
+                <div class="command"><code>/gbb</code> - Open main window</div>
+                <div class="command"><code>/gbb config</code> - Open settings</div>
+                <div class="command"><code>/gbb reset</code> - Reset position</div>
+                <div class="command"><code>/gbb notify chat on</code> - Chat alerts</div>
+                <div class="command"><code>/gbb notify sound on</code> - Sound alerts</div>
+                <div class="command"><code>/gbb help</code> - Show all commands</div>
+            </div>
+        </section>
+
+        <section class="changelog">
+            <h2 style="color: var(--text-main); margin-bottom: 2rem;">📜 Changelog</h2>
+
+            <div class="version">
+                <h3>v1.6.0 — Ascension Update <span class="version-date">December 2025</span></h3>
+                <ul>
+                    <li><strong>Ascension Filter</strong>: New options panel for Vault of the Inquisition (VOTI) and Road to De' Other Side (RDOS)</li>
+                    <li><strong>Layout Fix</strong>: TBC Filter panel overlap resolved</li>
+                    <li><strong>Documentation</strong>: Added downloads badge and docs link</li>
+                </ul>
+            </div>
+
+            <div class="version">
+                <h3>v1.5.0 — Layout Fix <span class="version-date">December 2025</span></h3>
+                <ul>
+                    <li><strong>Fixed</strong>: TBC Filter panel - Channel section no longer overlaps dungeon checkboxes</li>
+                </ul>
+            </div>
+
+            <div class="version">
+                <h3>v1.3.0 — Performance <span class="version-date">December 2025</span></h3>
+                <ul>
+                    <li><strong>Fixed</strong>: Message position jumping bug - stable sorting</li>
+                    <li><strong>Optimized</strong>: UI update throttling (0.2s interval)</li>
+                    <li><strong>Optimized</strong>: Cached SplitNoNb function for faster parsing</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Created by Xurkon for the Project Ascension Community</p>
+        <p>
+            <a href="https://github.com/Xurkon/GroupBulletinBoard">GitHub</a> •
+            <a href="https://github.com/Xurkon/GroupBulletinBoard/blob/main/LICENSE">License</a> •
+            <a href="https://ascension.gg">Project Ascension</a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">
+            Credits: Original by GPI • Classic TBC by Vyscî-Whitemane • TBC backport by Obszczymucha • WotLK port by fondlez
+        </p>
+    </footer>
+
+</body>
+
+</html>
