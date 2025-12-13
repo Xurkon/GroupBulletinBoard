@@ -3,7 +3,7 @@ local _, GBB = GroupBulletinBoard_Loader.Main()
 GBB.locales = {
   enGB = {
     ["lfg_channel"] = "LookingForGroup", -- must be the default chat-name!
-    ["world_channel"] = "",         -- must be the default chat-name!
+    ["world_channel"] = "",              -- must be the default chat-name!
     ["GuildChannel"] = "Guild Channel",
 
     ["msgNbRequest"] = "%d request(s) - click to whisper - shift+click to 'who' - ctrl+click to 'invite'",
@@ -17,7 +17,8 @@ GBB.locales = {
     ["msgTotalTime"] = "Total time %s",
     ["msgLastTime"] = "Last update %s",
     ["msgLocalRestart"] = "The setting is not transferred until after a restart (/reload)",
-    ["msgCustomList"] = "Enter your own unique search patterns here. If there is nothing, the English patterns are displayed as a grayed out example.",
+    ["msgCustomList"] =
+    "Enter your own unique search patterns here. If there is nothing, the English patterns are displayed as a grayed out example.",
     ["msgAddNote"] = "%s note",
     ["msgLastSeen"] = "Last Seen:",
     ["heroicAbr"] = "H",
@@ -29,8 +30,9 @@ GBB.locales = {
 
     ["HeaderSettings"] = "Settings",
     ["PanelFilter"] = "Vanilla Filter",
-		["TBCPanelFilter"]="TBC Filter",
-		["WotlkPanelFilter"]="WotLK Filter",
+    ["TBCPanelFilter"] = "TBC Filter",
+    ["WotlkPanelFilter"] = "WotLK Filter",
+    ["AscensionPanelFilter"] = "Ascension Filter",
     ["HeaderTags"] = "Search patterns",
     ["HeaderTagsCustom"] = "Custom search patterns",
     ["PanelTags"] = "Search patterns",
@@ -115,25 +117,32 @@ GBB.locales = {
     ["SlashConfig"] = "Open configuration",
     ["SlashDefault"] = "open main window",
     ["SlashAbout"] = "open about",
-    ["SlashChatOrganizer"] = "Creates a new chat tab if one doesn't already exist, named \"LFG\" with all channels subscribed. Removes LFG heavy spam channels from default chat tab",
+    ["SlashChatOrganizer"] =
+    "Creates a new chat tab if one doesn't already exist, named \"LFG\" with all channels subscribed. Removes LFG heavy spam channels from default chat tab",
 
     ["TabRequest"] = "Requests",
     ["TabGroup"] = "Members",
 
-    ["AboutUsage"] = "GBB searches the chat messages for dungeon requests in the background. To whisper a person, simply click on the entry with the left mouse button. For a '/who' a shift + left click is enough. The dungeon list can be filtered in the settings. You can also fold this by left-clicking on the dungeon name.|nOld entries are filtered out after 150 seconds.",
+    ["AboutUsage"] =
+    "GBB searches the chat messages for dungeon requests in the background. To whisper a person, simply click on the entry with the left mouse button. For a '/who' a shift + left click is enough. The dungeon list can be filtered in the settings. You can also fold this by left-clicking on the dungeon name.|nOld entries are filtered out after 150 seconds.",
 
-    ["AboutSlashCommand"] = "<value> can be true, 1, enable, false, 0, disable. If <value> is omitted, the current status switches.",
+    ["AboutSlashCommand"] =
+    "<value> can be true, 1, enable, false, 0, disable. If <value> is omitted, the current status switches.",
 
 
-    ["AboutInfo"] = "GBB provides an overview of the endless requests in the chat channels. It detects all requests to the classic dungeons, sorts them and presents them clearly way. Numerous filtering options reduce the gigantic number to exactly the dungeons that interest you. And if that's not enough, GBB will let you know about any new request via a sound or chat notification. And finally, GBB can post your request repeatedly.",
+    ["AboutInfo"] =
+    "GBB provides an overview of the endless requests in the chat channels. It detects all requests to the classic dungeons, sorts them and presents them clearly way. Numerous filtering options reduce the gigantic number to exactly the dungeons that interest you. And if that's not enough, GBB will let you know about any new request via a sound or chat notification. And finally, GBB can post your request repeatedly.",
     ["AboutCredits"] = "Original by GPI / Erytheia-Razorfen.",
     ["AboutCreditsClassic"] = "Classic version by Vyscî-Whitemane.",
   },
 
   deDE = {
-    ["AboutInfo"] = "GBB verschafft euch den Überblick über die endlosen Anfragen in den Chat-Channels. Es erkennt alle Anfragen zu den klassischen Instanzen, sortiert sie und stellt sie übersichtlich da. Filtermöglichkeiten reduziert die gigantische Anzahl auf genau die Instanzen, die dich interessieren. Und falls das nicht reicht, informiert GBB dich über jede neue Anfrage mittels eines Sounds oder Chat-Benachrichtigung. Und abschließend kann GBB deine persönliche Anfrage wiederholt veröffentlichen.",
-    ["AboutSlashCommand"] = "<value> kann true,1,enable,false,0,disable sein. Wird <value> weggelassen, schaltet der aktuelle Status um.",
-    ["AboutUsage"] = "GBB durchsucht im Hintergrund die Chat-Nachrichten nach Instanz-Anfragen. Um eine Person anzuflüstern, einfach den Eintrag mit links anklicken. Für ein '/who' genügt ein Shift + links klick. Die Instanz-Liste lässt sich in den Einstellungen filtern. Zudem kann man mit einen Linksklick auf den Instanz-Namen diesen falten.|nAlte Einträge werden nach 150 Sekunden rausgefiltert.",
+    ["AboutInfo"] =
+    "GBB verschafft euch den Überblick über die endlosen Anfragen in den Chat-Channels. Es erkennt alle Anfragen zu den klassischen Instanzen, sortiert sie und stellt sie übersichtlich da. Filtermöglichkeiten reduziert die gigantische Anzahl auf genau die Instanzen, die dich interessieren. Und falls das nicht reicht, informiert GBB dich über jede neue Anfrage mittels eines Sounds oder Chat-Benachrichtigung. Und abschließend kann GBB deine persönliche Anfrage wiederholt veröffentlichen.",
+    ["AboutSlashCommand"] =
+    "<value> kann true,1,enable,false,0,disable sein. Wird <value> weggelassen, schaltet der aktuelle Status um.",
+    ["AboutUsage"] =
+    "GBB durchsucht im Hintergrund die Chat-Nachrichten nach Instanz-Anfragen. Um eine Person anzuflüstern, einfach den Eintrag mit links anklicken. Für ein '/who' genügt ein Shift + links klick. Die Instanz-Liste lässt sich in den Einstellungen filtern. Zudem kann man mit einen Linksklick auf den Instanz-Namen diesen falten.|nAlte Einträge werden nach 150 Sekunden rausgefiltert.",
     ["BtnCancel"] = "Abbruch",
     ["BtnColorGuild"] = "Farbe der Gildentextes",
     ["BtnEntryColor"] = "Farbe der Anfrage",
@@ -211,7 +220,8 @@ GBB.locales = {
     ["lfg_channel"] = "SucheNachGruppe",
     ["world_channel"] = "Welt",
     ["msgAddNote"] = "Notiz von %s",
-    ["msgCustomList"] = "Hier die eigenen eindeutigen Suchbegriffe eingeben. Wenn nichts vorhanden ist, werden die englischen als ausgegraues Beispiel angezeigt.",
+    ["msgCustomList"] =
+    "Hier die eigenen eindeutigen Suchbegriffe eingeben. Wenn nichts vorhanden ist, werden die englischen als ausgegraues Beispiel angezeigt.",
     ["msgDoAnnounce"] = "Request announced.",
     ["msgInit"] = "GroupBulletinBoard %s geladen. Zum Starten '/gbb help' eingeben.",
     ["msgLastSeen"] = "Zuletzt gesehen:",
@@ -249,9 +259,12 @@ GBB.locales = {
     ["world_channel"] = "Monde"
   },
   ruRU = {
-    ["AboutInfo"] = "GBB обеспечивает группировку нескончаемых запросов в каналах чата. Он обнаруживает все сообщения про поиск группы в классические подземелья, сортирует и удобно представляет их. Многочисленные опции фильтрации уменьшают гигантское число сообщений и оставляют только те подземелья, которые вас интересуют. А если этого недостаточно, GBB сообщит вам о любом новом запросе через звуковое или чат-уведомление. И, наконец, GBB может публиковать ваш запрос повторно.",
-    ["AboutSlashCommand"] = "<значение> может быть true, 1, enable, false, 0, disable. Если <значение> опущено, текущий статус будет переключен.",
-    ["AboutUsage"] = "GBB ищет в сообщениях чата запросы на поиск группы в подземелья в фоновом режиме. Чтобы шепнуть человеку, просто нажмите на строку ЛКМ. Для '/кто' достаточно ШИФТ + ЛКМ. Список подземелий можно отфильтровать в настройках. Вы также можете свернуть это, нажав ЛКМ по названию подземелья.|nСтарые записи отфильтровываются через 150 секунд (по-умолчанию).",
+    ["AboutInfo"] =
+    "GBB обеспечивает группировку нескончаемых запросов в каналах чата. Он обнаруживает все сообщения про поиск группы в классические подземелья, сортирует и удобно представляет их. Многочисленные опции фильтрации уменьшают гигантское число сообщений и оставляют только те подземелья, которые вас интересуют. А если этого недостаточно, GBB сообщит вам о любом новом запросе через звуковое или чат-уведомление. И, наконец, GBB может публиковать ваш запрос повторно.",
+    ["AboutSlashCommand"] =
+    "<значение> может быть true, 1, enable, false, 0, disable. Если <значение> опущено, текущий статус будет переключен.",
+    ["AboutUsage"] =
+    "GBB ищет в сообщениях чата запросы на поиск группы в подземелья в фоновом режиме. Чтобы шепнуть человеку, просто нажмите на строку ЛКМ. Для '/кто' достаточно ШИФТ + ЛКМ. Список подземелий можно отфильтровать в настройках. Вы также можете свернуть это, нажав ЛКМ по названию подземелья.|nСтарые записи отфильтровываются через 150 секунд (по-умолчанию).",
     ["heroicAbr"] = "H",
     ["normalAbr"] = "N",
     ["raidAbr"] = "R",
@@ -329,7 +342,8 @@ GBB.locales = {
     ["HeaderUsage"] = "Использование",
     ["lfg_channel"] = "ПоискСпутников",
     ["world_channel"] = "Мир",
-    ["msgCustomList"] = "Введите здесь свои уникальные шаблоны для поиска. Если занчение не заполнено, английские шаблоны отображаются в виде примера серым цветом.",
+    ["msgCustomList"] =
+    "Введите здесь свои уникальные шаблоны для поиска. Если занчение не заполнено, английские шаблоны отображаются в виде примера серым цветом.",
     ["msgDoAnnounce"] = "Запрос объявлен.",
     ["msgInit"] = "GroupBulletinBoard %s загружен. Введите '/gbb help' для получения информации.",
     ["msgLastTime"] = "Последнее обновление %s",
@@ -473,12 +487,14 @@ GBB.locales = {
     ["TabRequest"] = "尋求組隊",
     ["TabGroup"] = "成員",
 
-    ["AboutUsage"] = "GBB 於背景搜尋尋求組隊的聊天訊息. 欲密語, 單點左鍵即可. 欲查詢 '/who' shift + 左鍵即可. 地城列表可以在設定中被過濾. 你也可以對地城名稱單點左鍵折疊.|n舊的尋求組隊會在150秒後被過濾掉.",
+    ["AboutUsage"] =
+    "GBB 於背景搜尋尋求組隊的聊天訊息. 欲密語, 單點左鍵即可. 欲查詢 '/who' shift + 左鍵即可. 地城列表可以在設定中被過濾. 你也可以對地城名稱單點左鍵折疊.|n舊的尋求組隊會在150秒後被過濾掉.",
 
     ["AboutSlashCommand"] = "<value> 可以是 true, 1, enable, false, 0, disable. 如 <value> 未提供, 則會改變目前狀態.",
 
 
-    ["AboutInfo"] = "GBB provides an overview of the endless requests in the chat channels. It detects all requests to the classic dungeons, sorts them and presents them clearly way. Numerous filtering options reduce the gigantic number to exactly the dungeons that interest you. And if that's not enough, GBB will let you know about any new request via a sound or chat notification. And finally, GBB can post your request repeatedly.",
+    ["AboutInfo"] =
+    "GBB provides an overview of the endless requests in the chat channels. It detects all requests to the classic dungeons, sorts them and presents them clearly way. Numerous filtering options reduce the gigantic number to exactly the dungeons that interest you. And if that's not enough, GBB will let you know about any new request via a sound or chat notification. And finally, GBB can post your request repeatedly.",
     ["AboutCredits"] = "Original by GPI / Erytheia-Razorfen.",
     ["AboutCreditsClassic"] = "Classic version by Vyscî-Whitemane.",
   },

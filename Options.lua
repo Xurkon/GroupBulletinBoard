@@ -377,6 +377,27 @@ function GBB.OptionsInit()
 
   --GBB.Options.AddSpace()	
 
+  -- Ascension Filter Panel
+  GBB.Options.AddPanel( GBB.L[ "AscensionPanelFilter" ] )
+  GBB.Options.AddCategory( GBB.L[ "HeaderDungeon" ] )
+  GBB.Options.Indent( 10 )
+
+  AscensionChkBox_FilterDungeon = {}
+  for index = GBB.ASCENSIONDUNGEONSTART, GBB.ASCENSIONMAXDUNGEON do
+    AscensionChkBox_FilterDungeon[ index ] = CheckBoxFilter( GBB.dungeonSort[ index ], true )
+  end
+
+  GBB.Options.InLine()
+  GBB.Options.AddButton( GBB.L[ "BtnSelectAll" ], function()
+    DoSelectFilter( true, AscensionChkBox_FilterDungeon, GBB.ASCENSIONDUNGEONSTART, GBB.ASCENSIONMAXDUNGEON )
+  end )
+  GBB.Options.AddButton( GBB.L[ "BtnUnselectAll" ], function()
+    DoSelectFilter( false, AscensionChkBox_FilterDungeon, GBB.ASCENSIONDUNGEONSTART, GBB.ASCENSIONMAXDUNGEON )
+  end )
+  GBB.Options.EndInLine()
+
+  GBB.Options.Indent( -10 )
+
   -- Tags
   GBB.Options.AddPanel( GBB.L[ "PanelTags" ], false, true )
 
