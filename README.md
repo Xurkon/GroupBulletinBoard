@@ -1,68 +1,125 @@
+<div align="center">
+
 # GroupBulletinBoard
 
-### [Download Latest](https://github.com/fondlez/GroupBulletinBoard/releases/latest)
+![Version](https://img.shields.io/badge/version-v1.3.0-blue.svg)
+![License](https://img.shields.io/github/license/Xurkon/GroupBulletinBoard?style=for-the-badge&label=LICENSE&color=2980b9)
+![Game](https://img.shields.io/badge/GAME-WOW_3.3.5a-blue?style=for-the-badge&logo=battle.net&logoColor=white)
+![Platform](https://img.shields.io/badge/PLATFORM-PROJECT_ASCENSION-orange?style=for-the-badge)
 
-This is a port to WotLK (3.3.5a) of a TBC backport of a Classic TBC addon!
+<br/>
 
-* WotLK (3.3.5a) port: [fondlez](https://github.com/fondlez)
-* TBC 2.4.3 backport: [Obszczymucha aka. Ohhaimark](https://codeberg.org/obszczymucha/group-bulletin-board-tbc)
-* Classic TBC addon: [Vyscî-Whitemane](https://github.com/Vysci/LFG-Bulletin-Board)
-* Original addon: <https://legacy.curseforge.com/wow/addons/group-bulletin-board>
+**LFG/LFM Request Aggregator for World of Warcraft 3.3.5a**
 
-## Description
+[⬇ **Download Latest**](https://github.com/Xurkon/GroupBulletinBoard/releases/latest) &nbsp;&nbsp;•&nbsp;&nbsp; [📂 **View Source**](https://github.com/Xurkon/GroupBulletinBoard)
 
-GroupBulletinBoard (GBB) provides an overview of the endless requests in the
-chat channels. It detects all requests to the instances, sorts them and presents
-them clearly way. Numerous filtering options reduce the gigantic number to
-exactly the dungeons that interest you. And if that's not enough, GBB will let
-you know about any new request via a sound or chat notification.
+</div>
 
-**Ascension Support**: Includes a dedicated filter for Ascension-specific
-custom dungeons like Vault of the Inquisition and Road to De' Other Side.
+---
 
-Currently, English, German, Russian and Chinese dungeons are recognized
-natively. But it is easily possible to adapt GBB to any language.
+## ✨ Features
 
-To open the settings, use slash command: **`/gbb`** or click the minimap icon.
+### 🔍 Smart Request Detection
 
-## Graphical Interface
+Detects all LFG/LFM requests from chat channels, sorts them by dungeon, and presents them in a clean organized list.
 
-### Main Window
+### 🎮 Ascension Support
 
-![Main Window screenshot](doc/img/addon-gbb-1.2.0-main.jpg)
+Dedicated **Ascension Filter** for custom dungeons like **Vault of the Inquisition** and **Road to De' Other Side**.
 
-### Interface Settings
+### 🌍 Multi-Language Support
 
-![Interface Settings screenshot](doc/img/addon-gbb-1.2.0-settings.jpg)
+Natively recognizes dungeons in **English**, **German**, **Russian**, **French**, and **Chinese**. Easily customizable for any language.
 
-## Slash Commands
+### 🔔 Notifications
 
-`<value>` can be true, 1, enable, false, 0, disable. If <value> is omitted, the
-current status switches.
+Get notified about new requests via **sound** or **chat notifications** - never miss a group again!
 
-* `/gbb notify chat <value>` - On new request make a chat notification
-* `/gbb notify sound <value>` - On new request make a sound notification
-* `/gbb debug <value>` - Show debug information
-* `/gbb reset` -  Reset main window position
-* `/gbb config/setup/options` - Open configuration
-* `/gbb about` - open about
-* `/gbb help` - Print help
-* `/gbb chat clean/organize` - Creates a new chat tab if one doesn't already
-exist, named \"LFG\" with all channels subscribed. Removes LFG heavy spam
-channels from default chat tab
-* `/gbb` - open main window
+### ⚡ Performance Optimized
 
-## Frequently Asked Questions (FAQ)
+UI throttling and caching ensure smooth performance even during heavy trade channel spam.
 
-### Q. How to blacklist a word?
+### 🎨 Customizable Filters
 
-From GroupBulletinBoard Settings, click on "Search patterns", make sure "Custom"
-is checked, add words to "Blacklist words", then reload the user interface, e.g.
-using the `/reload` or `/reloadui` command.
+Filter by dungeon, level range, heroic/normal mode, and more. Fold/unfold dungeons to focus on what you need.
 
-## Credits
+---
 
-### Original Addon
+## 📥 Installation
 
-* Arrogant_Dreamer, Hubbotu and kavarus for the Russian translation
-* Baudzilla for the graphics/idea of the resize-code
+1. Download the latest release from the link above
+2. Extract to `Interface/AddOns/GroupBulletinBoard`
+3. Restart WoW or `/reload` if in-game
+4. Click the minimap button or type `/gbb` to open
+
+---
+
+## 🔧 Usage
+
+### Opening the Addon
+
+- Click the **minimap button**
+- Or type `/gbb` in chat
+
+### Interacting with Requests
+
+- **Left-click**: Whisper the player
+- **Shift + Left-click**: `/who` the player
+- **Ctrl + Left-click**: Invite the player
+- **Click dungeon name**: Fold/unfold that dungeon
+
+### Slash Commands
+
+| Command | Description |
+|---------|-------------|
+| `/gbb` | Open main window |
+| `/gbb config` | Open settings |
+| `/gbb reset` | Reset window position |
+| `/gbb notify chat <on/off>` | Toggle chat notifications |
+| `/gbb notify sound <on/off>` | Toggle sound notifications |
+| `/gbb help` | Show all commands |
+
+---
+
+## ⚙️ Settings
+
+Access settings via **Interface → AddOns → Group Bulletin...** or `/gbb config`
+
+### Filter Panels
+
+- **Vanilla Filter**: Classic dungeons (RFC through Naxx)
+- **TBC Filter**: Burning Crusade dungeons
+- **WotLK Filter**: Wrath of the Lich King dungeons
+- **Ascension Filter**: Custom Ascension dungeons (VOTI, RDOS)
+
+### Search Patterns
+
+Customize which keywords trigger dungeon detection. Add your own patterns or blacklist words.
+
+---
+
+## 📜 Changelog
+
+See [changelog.md](changelog.md) for full version history.
+
+### v1.3.0 - Ascension Update
+
+- **Ascension Filter**: New panel for Vault of the Inquisition & Road to De' Other Side
+- **Fixed**: Message position jumping bug
+- **Optimized**: UI throttling and caching for better performance
+
+---
+
+## 👥 Credits
+
+- **Xurkon** - Ascension port & optimizations
+- **fondlez** - WotLK 3.3.5a port
+- **Obszczymucha (Ohhaimark)** - TBC 2.4.3 backport
+- **Vyscî-Whitemane** - Classic TBC addon
+- **GPI / Erytheia-Razorfen** - Original addon
+
+---
+
+## 📄 License
+
+See [LICENSE](LICENSE) for details.
