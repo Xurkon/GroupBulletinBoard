@@ -2,7 +2,7 @@
 
 # GroupBulletinBoard
 
-![Version](https://img.shields.io/badge/version-v1.4.0-blue.svg)
+![Version](https://img.shields.io/badge/version-v1.5.0-blue.svg)
 ![License](https://img.shields.io/github/license/Xurkon/GroupBulletinBoard?style=for-the-badge&label=LICENSE&color=2980b9)
 ![Game](https://img.shields.io/badge/GAME-WOW_3.3.5a-blue?style=for-the-badge&logo=battle.net&logoColor=white)
 ![Platform](https://img.shields.io/badge/PLATFORM-PROJECT_ASCENSION-orange?style=for-the-badge)
@@ -102,7 +102,7 @@ Customize which keywords trigger dungeon detection. Add your own patterns or bla
 
 See [changelog.md](changelog.md) for full version history.
 
-### v1.4.0 - Ascension Update
+### v1.5.0 - Ascension Update
 
 - **Ascension Filter**: New panel for Vault of the Inquisition & Road to De' Other Side
 - **Fixed**: Message position jumping bug
