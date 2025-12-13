@@ -7,12 +7,13 @@
 ![Game](https://img.shields.io/badge/GAME-WOW_3.3.5a-blue?style=for-the-badge&logo=battle.net&logoColor=white)
 ![Platform](https://img.shields.io/badge/PLATFORM-PROJECT_ASCENSION-orange?style=for-the-badge)
 ![Downloads](https://img.shields.io/github/downloads/Xurkon/GroupBulletinBoard/total?style=for-the-badge&label=DOWNLOADS&color=e67e22)
+[![Documentation](https://img.shields.io/badge/DOCS-ONLINE-27ae60?style=for-the-badge)](https://xurkon.github.io/GroupBulletinBoard/)
 
 <br/>
 
 **LFG/LFM Request Aggregator for World of Warcraft 3.3.5a**
 
-[⬇ **Download Latest**](https://github.com/Xurkon/GroupBulletinBoard/releases/latest) &nbsp;&nbsp;•&nbsp;&nbsp; [📂 **View Source**](https://github.com/Xurkon/GroupBulletinBoard)
+[⬇ **Download Latest**](https://github.com/Xurkon/GroupBulletinBoard/releases/latest) &nbsp;&nbsp;•&nbsp;&nbsp; [📂 **View Source**](https://github.com/Xurkon/GroupBulletinBoard) &nbsp;&nbsp;•&nbsp;&nbsp; [📖 **Documentation**](https://xurkon.github.io/GroupBulletinBoard/)
 
 </div>
 
