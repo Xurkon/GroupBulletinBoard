@@ -8,6 +8,8 @@
 ![Platform](https://img.shields.io/badge/PLATFORM-PROJECT_ASCENSION-orange?style=for-the-badge)
 ![Downloads](https://img.shields.io/github/downloads/Xurkon/GroupBulletinBoard/total?style=for-the-badge&label=DOWNLOADS&color=e67e22)
 [![Documentation](https://img.shields.io/badge/DOCS-ONLINE-27ae60?style=for-the-badge)](https://xurkon.github.io/GroupBulletinBoard/)
+[![Patreon](https://img.shields.io/badge/Patreon-Support-orange?style=for-the-badge&logo=patreon)](https://patreon.com/Xurkon)
+[![PayPal](https://img.shields.io/badge/PayPal-Donate-blue?style=for-the-badge&logo=paypal)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=kancerous@gmail.com)
 
 <br/>
 
